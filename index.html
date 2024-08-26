@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme = "light">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- tailwind and daisyui links -->
+    <!-- Tailwind and DaisyUI links -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -17,68 +17,102 @@
     <script src="https://kit.fontawesome.com/31c1a2c2cc.js" crossorigin="anonymous"></script>
 
     <style>
-        .font-manrope{
-        font-family: "Manrope", sans-serif; 
+        .font-manrope {
+            font-family: "Manrope", sans-serif;
+        }
+
+        /* Prevent horizontal scrolling */
+        html, body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ensure images don't cause overflow */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Prevent content from pushing beyond viewport width */
+        .container {
+            max-width: 100%;
+            padding: 0;
         }
     </style>
 
-    <!-- script for color -->
+    <!-- Script for color -->
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: '#da373d',
-              'button-green': 'rgb(171, 239, 95)',
-              'button-gray': 'rgb(73, 73, 73)',
-              'button-grays': 'rgb(115, 115, 115)',
-              'border-gray': 'rgb(233, 233, 233)',
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'button-green': 'rgb(171, 239, 95)',
+                        'button-greener': 'rgba(171, 239, 95, 0.5)',
+                        'button-gray': 'rgb(73, 73, 73)',
+                        'button-grays': 'rgb(115, 115, 115)',
+                        'border-gray': 'rgb(233, 233, 233)',
+                        'white-transparent': 'rgba(255, 255, 255, 0)',
+                    }
+                }
             }
-          }
         }
-      }
-  </script>
+    </script>
 </head>
 <body class="font-manrope">
     <!-- Header section starts here -->
-    <header class="">
-        <!-- navbar section starts here -->
-         <nav class="container mx-auto">
+    <header class="bg-gradient-to-t from-white to-white-transparent">
+        <!-- Navbar section starts here -->
+        <nav class="container mx-auto my-10 px-4">
             <div class="navbar bg-base-100">
-                <div class="navbar-start">  
-                  <i class="fa-solid fa-arrow-right bg-button-green -rotate-45 rounded-full px-2 py-2 mx-2"></i>
-                  <a class="font-extrabold text-3xl">Rinterio</a>
+                <div class="navbar-start">
+                    <i class="fa-solid fa-arrow-right bg-button-green -rotate-45 rounded-full p-2 mx-2"></i>
+                    <a class="font-extrabold text-2xl lg:text-3xl">Rinterio</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1 text-lg text-button-grays">
-                    <li><a class="font-extrabold text-button-gray">Home</a></li>
-                    <li><a>Services</a></li>
-                    <li><a>Portfolio</a></li>
-                    <li><a>Blogs</a></li>
-                    <li><a>Contact Us</a></li>
-                  </ul>
-                </div>
-                <div class="navbar-end space-x-4">
-                  
-                  <i class="fa-solid fa-magnifying-glass border border-border-gray rounded-full px-2 py-2 hidden lg:block"></i>
-                  <i class="fa-solid fa-cart-shopping border border-border-gray rounded-full px-2 py-2 hidden lg:block"></i>
-                  <a class="btn bg-button-green rounded-full font-extrabold text-xl text-center justify-center py-1 px-4 hidden lg:block">Book Consult <i class="fa-solid fa-arrow-right bg-black text-white -rotate-45 rounded-full px-2 py-2 "></i></a>
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-gray-200 border border-gray-400 rounded-full px-4.5 py-2.5">
-                      <i class="fa-solid fa-bars"></i>
-                    </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a>Home</a></li>
+                    <ul class="menu menu-horizontal px-1 text-lg text-button-grays">
+                        <li><a class="font-extrabold text-button-gray">Home</a></li>
                         <li><a>Services</a></li>
                         <li><a>Portfolio</a></li>
                         <li><a>Blogs</a></li>
                         <li><a>Contact Us</a></li>
                     </ul>
                 </div>
-                
+                <div class="navbar-end space-x-4">
+                    <i class="fa-solid fa-magnifying-glass border border-border-gray rounded-full p-2 hidden lg:block"></i>
+                    <i class="fa-solid fa-cart-shopping border border-border-gray rounded-full p-2 hidden lg:block"></i>
+                    <a class="btn bg-button-green rounded-full font-extrabold text-lg lg:text-xl text-center py-1 px-4 hidden lg:flex items-center">
+                        Book Consult
+                        <i class="fa-solid fa-arrow-right bg-black text-white -rotate-45 rounded-full p-2 ml-2"></i>
+                    </a>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-gray-200 border border-gray-400 rounded-full px-4 py-2">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a>Home</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>Portfolio</a></li>
+                            <li><a>Blogs</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
+
+        <!-- Banner section starts here -->
+        <div class="container mx-auto px-5 text-center space-y-8 mb-32 flex flex-col lg:block">
+            <img src="assets/banner.png" alt="" class="mx-auto block">
+            <h1 class="text-center mt-4 text-2xl lg:text-6xl font-extrabold">A barn house of this design has a <br class="hidden lg:block">striking appearance</h1>
+            <p class="text-center mt-2 text-sm lg:text-base font-medium max-w-4xl mx-auto block">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+            <a class="btn bg-button-greener border border-button-green rounded-full font-extrabold text-lg lg:text-xl text-center py-1 px-4 items-center">
+                View Details
+                <i class="fa-solid fa-arrow-right bg-button-green text-black -rotate-45 rounded-full p-2 ml-2"></i>
+            </a>
+        </div>
     </header>
     <main></main>
     <footer></footer>
