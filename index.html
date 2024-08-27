@@ -54,6 +54,7 @@
                         'button-gray': 'rgb(73, 73, 73)',
                         'button-grays': 'rgb(115, 115, 115)',
                         'border-gray': 'rgb(233, 233, 233)',
+                        'back-ground': 'rgb(33, 33, 33)',
                         'white-transparent': 'rgba(255, 255, 255, 0)',
                     }
                 }
@@ -61,12 +62,12 @@
         }
     </script>
 </head>
-<body class="font-manrope">
+<body class="font-manrope bg-gray-100">
     <!-- Header section starts here -->
     <header class="bg-gradient-to-t from-white to-white-transparent">
         <!-- Navbar section starts here -->
         <nav class="container mx-auto my-10 px-4">
-            <div class="navbar bg-base-100">
+            <div class="navbar ">
                 <div class="navbar-start">
                     <i class="fa-solid fa-arrow-right bg-button-green -rotate-45 rounded-full p-2 mx-2"></i>
                     <a class="font-extrabold text-2xl lg:text-3xl">Rinterio</a>
@@ -114,7 +115,49 @@
             </a>
         </div>
     </header>
-    <main></main>
+    <main>
+        <!-- intro section starts here -->
+        <div class="flex flex-col lg:flex-row container mx-auto items-stretch space-y-4 lg:space-y-0 lg:space-x-8">
+            <!-- Writing section starts here -->
+            <div class="flex-1 lg:block flex flex-col space-y-6 lg:pl-32 px-5 justify-center items-center">
+                <a class="btn bg-white rounded-full font-bold text-base text-center lg:py-1 lg:px-3 items-center max-w-40 justify-center">
+                    <i class="fa-solid fa-arrow-right p-2"></i>About Me
+                </a>
+                <div class="text-center lg:text-start">
+                    <h1 class="font-bold text-4xl text-back-ground mt-4 lg:mt-8">We design thoughtful,<br> liveable spaces</h1>
+                    <p class="font-medium text-base text-button-gray mt-2">The barn house captivates with its blend of rustic charm and
+                    modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                </div>
+                <div class="space-y-5">
+                    <div class="hero bg-white rounded-2xl">
+                        <div class="hero-content flex-row lg:pr-40">
+                            <img src="assets/commercial.png" class="max-w-sm rounded-lg shadow-2xl" />
+                            <div>
+                                <h1 class="text-xl font-extrabold">Commercial</h1>
+                                <p class="py-2">The barn house captivates with its blend of rustic charm and modern.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero bg-white rounded-2xl">
+                        <div class="hero-content flex-row lg:pr-40">
+                            <img src="assets/residential.png" class="max-w-sm rounded-lg shadow-2xl" />
+                            <div>
+                                <h1 class="text-xl font-extrabold">Residential</h1>
+                                <p class="py-2">The barn house captivates with its blend of rustic charm and modern.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Image section starts here -->
+            <div class="flex-1">
+                <img src="assets/Rectangle.png" alt="" class="p-5 rounded-xl">
+            </div>
+        </div>
+    </main>
+    
+    
+    
     <footer></footer>
 </body>
 </html>
